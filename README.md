@@ -13,7 +13,7 @@ it to this Google Form [fill].
 
 Download the code for the `Query` example from the reading:
 
-[link]
+https://cseweb.ucsd.edu/classes/sp17/cse11-a/lecture11.html
 
 ### Task 1
 
