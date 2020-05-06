@@ -1,52 +1,90 @@
 # Exam 1
 
-This page details a **take-home exam** that you will complete over the next few
-days.
+This page details a **take-home exam** that you will complete over the next
+few days. You can't communicate with anyone about the content of the
+assignment until you receive your grade. The course staff will not give
+debugging advice or answer questions about the problems. If you have
+technical trouble creating a screencast (detailed below) feel free to reach
+out for assistance.
 
-You will complete the programming task below and submit the corresponding Java
-file to the `exam1` Gradescope assignment.
+You **can** make use of any course notes, online resources, Java tools, and
+so on to complete the exam.
+
+You will complete the programming task below and submit `ExamplesSearch.java`
+to the `exam1` Gradescope assignment.
 
 You will also submit a **video screencast** of yourself presenting a portion of
 it to this Google Form [fill].
 
+Submission checklist (see long descriptions below for full details):
+
+- `[ ]` Fields `task1a` and `task1b` in `ExamplesSearch` class
+- `[ ]` Three examples of testing `task1b` in `ExamplesSearch` class
+- `[ ]` `AreaLessThan` class
+- `[ ]` Two constructed `AreaLessThan` objects
+- `[ ]` Four total tests for `AreaLessThan` (two for each object)
+- `[ ]` `EitherQuery` class
+- `[ ]` Constructed `EitherQuery` object with one `AndQuery` and one other query
+- `[ ]` Two tests using this constructed `EitherQuery` object
+- `[ ]` Screencast
+  - Show ID
+  - Trace evaluation of `task1b` test
+  - Trace evaluation of `EitherQuery` test
+
+Your submission will be graded **after** the deadline. The Gradescope upload
+will just check to make sure that there aren't any errors reported by Java
+when we try to run your programs, not whether tests succeeded or failed. You
+should test thoroughly yourself to make sure your program works as expected.
+
 ## Tasks
 
-Download the code for the `Query` example from the reading:
+Download this starter code:
 
-https://cseweb.ucsd.edu/classes/sp17/cse11-a/lecture11.html
+[link]
+
+You should **not** change any of the existing methods or classes except for
+adding to `ExamplesSearch`. Don't change `ImageQuery` or the other query
+classes, just add new ones as described below.
 
 ### Task 1
 
-- Add a new field to `ExamplesSearch` called `task1b` that is a query that
-returns `true` on `matches` for images that have the extension `"jpg"`.
+- Add a new **field** to the `ExamplesSearch` class called `task1a` of type
+`ImageQuery`. Its value should be a query that returns `true` on `matches`
+for images that have the extension `"jpg"`.
 
-- Add a new field to `ExamplesSearch` called `task1a` that is a query that
-returns `true` on `matches` for images that have the keyword `"ucsd"` and do
-not have the keyword `"ucsf"`. Provide examples of matching on:
-  1. [Vid1-SDNotSF] An image that has the keyword `"ucsd"` and not `"ucsf"`
-  2. [Vid1-SDSF] An image that has the keyword `"ucsd"` and has the keyword `"ucsf"`
-  3. [Vid1-NoSDSF] An image that does not have either `"ucsd"` or `"ucsf"` as a keyword
+- Add a new field to `ExamplesSearch` called `task1b` of type `ImageQuery`.
+Its `matches` method should return `true` for images that have the keyword
+`"ucsd"` and do **not** have the keyword `"ucsf"`. Show three examples of
+testing this query on ImageData inputs matching these descriptions:
+  1. An image that has the keyword `"ucsd"` and not `"ucsf"`
+  2. An image that has the keyword `"ucsd"` and has the keyword `"ucsf"`
+  3. An image that does not have either `"ucsd"` or `"ucsf"` as a keyword
 
 ### Task 2
 
-Add a new type of query called `NoKeywords` that represents a query
-for images that have no keywords. Assume that images with no keywords have
-the empty string `""` as their `keywords` field.
+Add a new type of query called `AreaLessThan` that represents a query that
+returns whether the area of an image (its width times its height) is less
+than an area provided to the query. It should implement `ImageQuery`.
 
-Demonstrate it on at least two image inputs.
+Test the new class by creating two example `AreaLessThan` queries, and
+testing **each** on two inputs: one example that returns `true` and one
+that returns `false`. You can write these as fields in `ExamplesSearch` or as
+tester methods, your choice, but they must be clearly indicated as the tests
+for Task 2.
 
 ### Task 3
 
 Add a new type of query called `EitherQuery` that represents a combination of
-two queries where one, but not the other, matches.
+two queries where one, but **not** the other, matches.
 
-Create an `EitherQuery` where both of the queries being combined are
-`AndQuery` objects with different matching behavior. Demonstrate using this
-query twice, once returning `true` and once returning `false`.
+Create an `EitherQuery` where **one** of the queries being combined is an
+`AndQuery` object (the other can be an query of your choice). Demonstrate
+using this query twice on two different `ImageData` inputs, once returning
+`true` and once returning `false`.
 
 ### Task 4 – Video
 
-You will record a short video of no more than 5 minutes. Include:
+You will record a short video of no more than 8 minutes. Include:
 
 - Your face and your student ID for a few seconds at the beginning. You don't
   have to be on camera the whole time, though it's fine if you are. Just a
@@ -55,23 +93,26 @@ You will record a short video of no more than 5 minutes. Include:
 - A capture of your screen running your program. Demonstrate and describe in
   a clear and audible voice the following tasks described below.
 
-  1. Choose one of the examples labeled above for Vid1 based on your student
-  ID. If your student ID:
+  1. For the _second_ example from `task1b` – “An image that has the keyword
+  `"ucsd"` and has the keyword `"ucsf"`”:
 
-  - Ends in 0-3, choose [SDNotSF]
-  - Ends in 4-6, choose [SDSF]
-  - Ends in 7-9, choose [NoSDSF]
-
-  Run the program and show the output corresponding to the method call for
-  this example. Then, starting from the line in your code with the test,
-  indicate each line of code that runs in your program while evaluating that
-  method call. You can scroll to and click the lines to highlight them, or
-  otherwise indicate each one. You should indicate them in the order that
-  **Java will evaluate them**.
+      Run the program and show the output corresponding to the method call for
+      this example. Then, starting from the line in your code with the the call
+      to the `matches` method, indicate each line of code that runs in your
+      program while evaluating that method call. You can scroll to and click the
+      lines to highlight them, or otherwise indicate each one. You should
+      indicate them in the order that
+      **Java will evaluate them** (this might be different than the order they
+      *appear in the file).
 
   2. For this task, repeat the process of running the program, showing the
   output, and indicating which lines run and in which order. This time, do it
-  for the `EitherQuery` you created in Task 3.
+  for one of the inputs to the the `EitherQuery` you created in Task 3.
+
+An example of what your video should look like is here:
+
+[FILL]
+
 
 
 
