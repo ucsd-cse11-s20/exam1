@@ -40,7 +40,9 @@ should test thoroughly yourself to make sure your program works as expected.
 
 Download this starter code:
 
-[link]
+[https://github.com/ucsd-cse11-s20/exam1](https://github.com/ucsd-cse11-s20/exam1)
+
+(This is very lightly adapted from [this reading](https://cseweb.ucsd.edu/classes/sp17/cse11-a/lecture11.html))
 
 You should **not** change any of the existing methods or classes except for
 adding to `ExamplesSearch`. Don't change `ImageQuery` or the other query

@@ -93,26 +93,8 @@ class NotQuery extends AQuery {
   }
 }
 
+// EXAM: Write new classes here
 
 class ExamplesSearch {
-  ImageData i1 = new ImageData("ucsd cse computer science", "png", 600, 400);
-  ImageData i2 = new ImageData("data science ai artificial intelligence", "png", 500, 400);
-  ImageQuery lg1 = new LargerThan(600, 400);
-  ImageQuery me1 = new MatchesExtension("png");
-  ImageQuery ck1 = new ContainsKeyword("ucsd");
-  ImageQuery all3 = this.lg1.and(this.me1).and(this.ck1);
-  ImageQuery all3Or = this.lg1.or(this.me1).or(this.ck1);
-  ImageQuery mixed = this.lg1.or(this.me1.and(new ContainsKeyword("ai")));
-  boolean testAnd(Tester t) {
-    return t.checkExpect(this.all3.matches(i1), true) &&
-           t.checkExpect(this.all3.matches(i2), false);
-  }
-  boolean testOr(Tester t) {
-    return t.checkExpect(this.all3Or.matches(i1), true) &&
-           t.checkExpect(this.all3Or.matches(i2), true);
-  }
-  boolean testMixed(Tester t) {
-    return t.checkExpect(this.mixed.matches(i1), true) &&
-           t.checkExpect(this.mixed.matches(i2), true);
-  }
+  // EXAM: Write examples/tests here
 }
