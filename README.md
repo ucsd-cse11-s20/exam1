@@ -78,15 +78,21 @@ for Task 2.
 
 Add a new type of query called `EitherQuery` that represents a combination of
 two queries that returns true if either one matches, but false if both or
-neither match. For example, an `EitherQuery` combining a keyword search
-for `"apple"` and a keyword search for `"banana"` would return true for an
-`ImageData` with keywords `"apple orange"` or `"banana fruit"`, and false
-for `"apple orange banana"` or `"no fruit here"`.
+neither match. For example, for an `EitherQuery` combining a keyword search
+for `"apple"` and a keyword search for `"banana"`:
 
-Then, create an `EitherQuery` where **one** of the queries being combined is
-an `AndQuery` object (the other can be an query of your choice). Demonstrate
-using this query twice on two different `ImageData` inputs, once returning
-`true` and once returning `false`.
+- It should return `true` when `match`ing an `ImageData` with keywords
+`"apple orange"`
+- It should return `true` when `match`ing an `ImageData` with keywords
+`"fruit banana"`
+- It should return `false` when `match`ing an `ImageData` with keywords
+`"apple orange banana"`
+- It should return `false` when `match`ing an `ImageData` with keywords
+`"no fruit here"`
+
+Then, create an `EitherQuery` object. Demonstrate using this query on two
+different `ImageData` inputs, once returning `true` and once returning
+`false`.
 
 ### Task 4 – Video
 
@@ -119,7 +125,3 @@ An example of what your video should look like when doing this kind of
 explanation is here:
 
 [https://drive.google.com/open?id=1E-TcVXSg9BI4MnWoVU9_BbcRJsu8ZhCf](https://drive.google.com/open?id=1E-TcVXSg9BI4MnWoVU9_BbcRJsu8ZhCf)
-
-
-
-
