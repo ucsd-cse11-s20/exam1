@@ -56,8 +56,9 @@ for images that have the extension `"jpg"`.
 
 - Add a new field to `ExamplesSearch` called `task1b` of type `ImageQuery`.
 Its `matches` method should return `true` for images that have the keyword
-`"ucsd"` and do **not** have the keyword `"ucsf"`. Show three examples of
-testing this query on ImageData inputs matching these descriptions:
+`"ucsd"` and do **not** have the keyword `"ucsf"` (`false` otherwise).
+Construct `ImageData` inputs matching these descriptions, and show how the
+query you constructed behaves when `match`ing each of them:
   1. An image that has the keyword `"ucsd"` and not `"ucsf"`
   2. An image that has the keyword `"ucsd"` and has the keyword `"ucsf"`
   3. An image that does not have either `"ucsd"` or `"ucsf"` as a keyword
