@@ -14,7 +14,7 @@ You will complete the programming task below and submit `ExamplesSearch.java`
 to the `exam1` Gradescope assignment.
 
 You will also submit a **video screencast** of yourself presenting a portion of
-it to this Google Form [fill].
+it to this [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSco7eqdZ_GaZCG9QqQ2wpDbsF39CL-6LNuhu-jzUtjd8hb6vQ/viewform).
 
 Submission checklist (see long descriptions below for full details):
 
@@ -75,10 +75,14 @@ for Task 2.
 ### Task 3
 
 Add a new type of query called `EitherQuery` that represents a combination of
-two queries where one, but **not** the other, matches.
+two queries that returns true if either one matches, but false if both or
+neither match. For example, an `EitherQuery` combining a keyword search
+for `"apple"` and a keyword search for `"banana"` would return true for an
+`ImageData` with keywords `"apple orange"` or `"banana fruit"`, and false
+for `"apple orange banana"` or `"no fruit here"`.
 
-Create an `EitherQuery` where **one** of the queries being combined is an
-`AndQuery` object (the other can be an query of your choice). Demonstrate
+Then, create an `EitherQuery` where **one** of the queries being combined is
+an `AndQuery` object (the other can be an query of your choice). Demonstrate
 using this query twice on two different `ImageData` inputs, once returning
 `true` and once returning `false`.
 
@@ -109,9 +113,10 @@ You will record a short video of no more than 8 minutes. Include:
   output, and indicating which lines run and in which order. This time, do it
   for one of the inputs to the the `EitherQuery` you created in Task 3.
 
-An example of what your video should look like is here:
+An example of what your video should look like when doing this kind of
+explanation is here:
 
-[FILL]
+[https://drive.google.com/open?id=1E-TcVXSg9BI4MnWoVU9_BbcRJsu8ZhCf](https://drive.google.com/open?id=1E-TcVXSg9BI4MnWoVU9_BbcRJsu8ZhCf)
 
 
 
